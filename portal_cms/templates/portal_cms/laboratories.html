@@ -1,0 +1,17 @@
+{% extends "portal_cms/article.html" %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<h2>{% trans 'Breve Histórico' %}</h2>
+	{% placeholder "content" %}
+
+	<h2>{% trans 'Responsável' %}</h2>
+	{% placeholder "responsible" %}
+
+	<h2>{% trans 'Local/Contato' %}</h2>
+	{% placeholder "contact" %}
+
+	<h2>{% trans 'Principais Equipamentos' %}</h2>
+	{% placeholder "equipment" %}
+{% endblock %}

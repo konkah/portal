@@ -1,0 +1,28 @@
+{% extends 'poseidon/base.html' %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block content %}
+    {% block top %}
+    {% endblock %}
+
+    <div id="content" class="site-content container clearfix">
+        <section id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
+                <div class="widget-area clearfix">
+                    {% block main %}
+                    {% endblock %}
+                </div>
+            </main>
+        </section>
+        <section id="secondary" class="sidebar widget-area clearfix" role="complementary">
+            {% trans 'Links Externos' as externalLinks %}
+            {% include 'poseidon/social.html' with title=externalLinks %}
+            {% trans 'Publicações' as publications %}
+            {% trans 'Artigos' as articles %}
+            {% trans 'Dissertações e Teses' as thesis %}
+			{% page_url "publicacoes" as url %}
+            {% include 'poseidon/sidebars/tabs.html' with title=publications url=url title1=articles title2=thesis links1=articleLinks links2=thesisLinks %}
+        </section>
+    </div>
+{% endblock %}

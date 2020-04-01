@@ -1,0 +1,37 @@
+{% load i18n %}
+
+<aside id="tzwb-tabbed-content-2" class="widget tzwb-tabbed-content clearfix">
+    {% include 'poseidon/pieces/header.html' with title=title url="" %}
+    <div class="tzwb-content tzwb-clearfix">
+        <div class="tzwb-tabnavi-wrap tzwb-clearfix">
+            <ul class="tzwb-tabnavi">
+                <li>
+                    <a href="#summary-1">{% trans 'Lista' %}</a>
+                </li>
+                <li>
+                    <a href="#summary-2">{% trans 'Tags' %}</a>
+                </li>
+            </ul>
+        </div>
+        <div id="summary-1" class="tzwb-tabcontent">
+            <ul class="tzwb-tabcontent-archives">
+                {% for link in summaryLinks %}
+                <li>
+                    <a href='{{link.url}}'>{{link.title}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="summary-2" class="tzwb-tabcontent">
+            <div class="tzwb-tabcontent-tagcloud widget_tag_cloud">
+                <div class="tagcloud">
+                    {% for tag in summaryTags %}
+                        <a href="#" class="tag-cloud-link" style="font-size: 8pt;" aria-label="tag {{tag}}">
+                            {{tag}}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

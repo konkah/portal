@@ -1,0 +1,9 @@
+{% load menu_tags %}
+
+{% if LANGUAGE_CODE != lang %}
+	<li class="menu-item menu-language">
+		<a href="{% page_language_url lang %}">
+			<img src="/static/images/{{lang}}.svg">
+		</a>
+	</li>
+{% endif %}

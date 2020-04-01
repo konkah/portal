@@ -1,0 +1,21 @@
+<aside id="tzwb-tabbed-content-3" class="widget tzwb-tabbed-content clearfix">
+    {% include 'poseidon/pieces/header.html' with title=title url=url %}
+    <div class="tzwb-content tzwb-clearfix">
+        <div class="tzwb-tabnavi-wrap tzwb-clearfix">
+            <ul class="tzwb-tabnavi">
+                <li>
+                    <a href="#tab-1">{{title1}}</a>
+                </li>
+                <li>
+                    <a href="#tab-2">{{title2}}</a>
+                </li>
+            </ul>
+        </div>
+        <div id="tab-1" class="tzwb-tabcontent">
+            {% include 'poseidon/sidebars/default_items.html' with links=links1 %}
+        </div>
+        <div id="tab-2" class="tzwb-tabcontent">
+            {% include 'poseidon/sidebars/default_items.html' with links=links2 %}
+        </div>
+    </div>
+</aside>

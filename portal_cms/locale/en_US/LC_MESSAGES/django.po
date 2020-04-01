@@ -1,0 +1,382 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-18 03:53-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: portal_cms/models.py:8
+msgid "Título"
+msgstr "Title"
+
+#: portal_cms/models.py:9
+msgid "Páginas a listar"
+msgstr "Pages to list"
+
+#: portal_cms/models.py:10
+msgid "Tipo de lista"
+msgstr "List Format"
+
+#: portal_cms/models.py:11
+msgid "Largura (px)"
+msgstr "Width (px)"
+
+#: portal_cms/models.py:12
+msgid "Altura (px)"
+msgstr "Height (px)"
+
+#: portal_cms/models.py:13
+msgid "Quantidade que será mostrada"
+msgstr "Quantity to show"
+
+#: portal_cms/models.py:14
+msgid "Precisa ter imagem para aparecer na lista?"
+msgstr "Does the page need to have image to show at list?"
+
+#: portal_cms/models.py:15
+msgid "Máximo de caracteres do texto"
+msgstr "Maximum of text characters to show"
+
+#: portal_cms/models.py:16
+msgid "Subtipo (deixar em branco para não filtrar):"
+msgstr "Subtype (leave blank to not filter)"
+
+#: portal_cms/models.py:17
+msgid "Conteúdo descritivo"
+msgstr "Content description"
+
+#: portal_cms/models.py:27 portal_cms/models.py:35
+msgid "Nome"
+msgstr "Name"
+
+#: portal_cms/models.py:28
+msgid "Link"
+msgstr ""
+
+#: portal_cms/models.py:29
+msgid "Logo"
+msgstr ""
+
+#: portal_cms/models.py:36
+msgid "E-mail"
+msgstr "E-mail"
+
+#: portal_cms/models.py:37
+msgid "Telefone"
+msgstr "Phone"
+
+#: portal_cms/models.py:38
+msgid "Mensagem"
+msgstr "Message"
+
+#: portal_cms/settings.py:110 portal_cms/settings.py:119
+msgid "Português (Brasil)"
+msgstr "Portuguese"
+
+#: portal_cms/settings.py:111 portal_cms/settings.py:126
+msgid "English (USA)"
+msgstr "English"
+
+#: portal_cms/settings.py:247
+msgid "Escolha um dos modelos abaixo:"
+msgstr "Choose one of the below models:"
+
+#: portal_cms/settings.py:248
+msgid "Slides"
+msgstr "Slides"
+
+#: portal_cms/settings.py:249 portal_cms/templates/poseidon/navigation.html:33
+#: portal_cms/views.py:31
+msgid "Ensino"
+msgstr "Teaching"
+
+#: portal_cms/settings.py:250 portal_cms/templates/poseidon/base_sidebar.html:21
+#: portal_cms/templates/poseidon/navigation.html:38
+msgid "Publicações"
+msgstr "Publications"
+
+#: portal_cms/settings.py:251 portal_cms/templates/poseidon/navigation.html:19
+#: portal_cms/views.py:55
+msgid "Laboratórios"
+msgstr "Laboratories"
+
+#: portal_cms/settings.py:252 portal_cms/templates/poseidon/navigation.html:28
+#: portal_cms/views.py:21
+msgid "Pesquisa & Desenvolvimento"
+msgstr "Research & Development"
+
+#: portal_cms/settings.py:253
+msgid "Membro do Time"
+msgstr "Team Member"
+
+#: portal_cms/settings.py:255
+msgid "Página não listada"
+msgstr "Page not listed"
+
+#: portal_cms/settings.py:259
+msgid "Grade"
+msgstr "Grid"
+
+#: portal_cms/settings.py:260
+msgid "Coluna"
+msgstr "Column"
+
+#: portal_cms/settings.py:261
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: portal_cms/settings.py:262
+msgid "Vertical"
+msgstr "Vertical"
+
+#: portal_cms/templates/portal_cms/empty.html:5
+#: portal_cms/templates/portal_cms/empty.html:9
+msgid "Escolha o modelo da Página"
+msgstr "Choose a page template"
+
+#: portal_cms/templates/portal_cms/empty.html:11
+msgid "InstrucoesModelo"
+msgstr ""
+"At the screen top, click at \"PAGE\" at DjangoCMS and then at \"TEMPLATES\". "
+"Choose one of the templates: this sets your page layout and where it will be "
+"shown at \"Home\"."
+
+#: portal_cms/templates/portal_cms/laboratories.html:6
+msgid "Breve Histórico"
+msgstr "History"
+
+#: portal_cms/templates/portal_cms/laboratories.html:9
+msgid "Responsável"
+msgstr "Responsible"
+
+#: portal_cms/templates/portal_cms/laboratories.html:12
+msgid "Local/Contato"
+msgstr "Contact"
+
+#: portal_cms/templates/portal_cms/laboratories.html:15
+msgid "Principais Equipamentos"
+msgstr "Equipment"
+
+#: portal_cms/templates/portal_cms/publications.html:8
+#: portal_cms/templates/portal_cms/teaching.html:8
+#: portal_cms/templates/portal_cms/team_member.html:8
+msgid "Subtipos"
+msgstr "To Subtype space, add a Text Plugin with one of these options:"
+
+#: portal_cms/templates/portal_cms/publications.html:9
+msgid "Subtipos Publicacoes"
+msgstr "Article or Thesis / Dissertation"
+
+#: portal_cms/templates/portal_cms/research.html:6
+msgid "Objetivo"
+msgstr "Objective"
+
+#: portal_cms/templates/portal_cms/research.html:9
+msgid "Coordenador"
+msgstr "Coordinator"
+
+#: portal_cms/templates/portal_cms/research.html:12
+msgid "Responsável Técnico"
+msgstr "Technical Responsible"
+
+#: portal_cms/templates/portal_cms/research.html:15
+msgid "Financiadora"
+msgstr "Financier"
+
+#: portal_cms/templates/portal_cms/research.html:18
+msgid "Vigência"
+msgstr "Validity"
+
+#: portal_cms/templates/portal_cms/slides.html:7
+msgid "Image de Slide"
+msgstr ""
+"This page represents an image at home slider. Use the Picture / Image plugin "
+"to add an image at this page or update it. Only the first image will be "
+"shown at Home."
+
+#: portal_cms/templates/portal_cms/teaching.html:9
+msgid "Subtipos Ensino"
+msgstr "Graduation, Pós-graduation or Extension"
+
+#: portal_cms/templates/portal_cms/teaching.html:16
+msgid "Professor"
+msgstr "Teacher"
+
+#: portal_cms/templates/portal_cms/team_member.html:9
+msgid "Subtipos Time"
+msgstr ""
+"Teacher, Researcher, Doctoral Student, Master Student, Graduation Student, "
+"Staff or Former member"
+
+#: portal_cms/templates/portal_static/contact.html:9
+#: portal_cms/templates/poseidon/navigation.html:44
+msgid "Contato"
+msgstr "Contact"
+
+#: portal_cms/templates/portal_static/contact.html:12
+msgid "Dados"
+msgstr "Identification"
+
+#: portal_cms/templates/portal_static/contact.html:17
+#: portal_cms/templates/portal_static/contact.html:19
+msgid "Name"
+msgstr "Name"
+
+#: portal_cms/templates/portal_static/contact.html:24
+#: portal_cms/templates/portal_static/contact.html:26
+msgid "Email"
+msgstr "E-mail"
+
+#: portal_cms/templates/portal_static/contact.html:31
+#: portal_cms/templates/portal_static/contact.html:33
+msgid "Phone"
+msgstr "Phone"
+
+#: portal_cms/templates/portal_static/contact.html:36
+msgid "Message"
+msgstr "Message"
+
+#: portal_cms/templates/portal_static/contact.html:42
+msgid "Enviar"
+msgstr "Send"
+
+#: portal_cms/templates/portal_static/partners.html:7
+#: portal_cms/templates/poseidon/navigation.html:22
+msgid "Parceiros"
+msgstr "Partners"
+
+#: portal_cms/templates/poseidon/base_sidebar.html:19
+msgid "Links Externos"
+msgstr "External links"
+
+#: portal_cms/templates/poseidon/base_sidebar.html:22
+msgid "Artigos"
+msgstr "Articles"
+
+#: portal_cms/templates/poseidon/base_sidebar.html:23
+msgid "Dissertações e Teses"
+msgstr "Thesis and Dissertations"
+
+#: portal_cms/templates/poseidon/footer.html:10
+msgid "Mapa do site"
+msgstr "Site map"
+
+#: portal_cms/templates/poseidon/footer.html:14
+msgid "Nossa Localização"
+msgstr "Our location"
+
+#: portal_cms/templates/poseidon/footer.html:18
+msgid "Caixa Postal"
+msgstr "Mailbox"
+
+#: portal_cms/templates/poseidon/footer.html:18
+msgid "CEP"
+msgstr "Postal Code"
+
+#: portal_cms/templates/poseidon/footer.html:19
+msgid "Tel."
+msgstr "Phone"
+
+#: portal_cms/templates/poseidon/footer.html:20
+msgid "Fax"
+msgstr "Fax"
+
+#: portal_cms/templates/poseidon/highlights/columns.html:45
+#: portal_cms/templates/poseidon/highlights/horizontal.html:39
+#: portal_cms/templates/poseidon/highlights/vertical.html:38
+msgid "Leia mais"
+msgstr "Read more"
+
+#: portal_cms/templates/poseidon/navigation.html:6
+msgid "Home"
+msgstr "Home"
+
+#: portal_cms/templates/poseidon/navigation.html:10
+msgid "Institucional"
+msgstr "Institutional"
+
+#: portal_cms/templates/poseidon/navigation.html:13
+msgid "Sobre nós"
+msgstr "About us"
+
+#: portal_cms/templates/poseidon/navigation.html:16
+msgid "Equipe"
+msgstr "Team"
+
+#: portal_cms/templates/poseidon/search.html:6
+msgid "Busca"
+msgstr "Search"
+
+#: portal_cms/templates/poseidon/search.html:12
+#: portal_cms/templates/poseidon/search.html:15
+msgid "Buscar por:"
+msgstr "Search by:"
+
+#: portal_cms/templates/poseidon/search.html:14
+msgid "Digite o que deseja buscar"
+msgstr "Type what you want to search"
+
+#: portal_cms/templates/poseidon/search.html:20
+msgid "Buscar"
+msgstr "Search"
+
+#: portal_cms/templates/poseidon/sidebars/summary.html:9
+msgid "Lista"
+msgstr "List"
+
+#: portal_cms/templates/poseidon/sidebars/summary.html:12
+msgid "Tags"
+msgstr "Tags"
+
+#: portal_cms/views.py:26 portal_cms/views.py:35 portal_cms/views.py:36
+#: portal_cms/views.py:37
+msgid "Graduação"
+msgstr "Graduation"
+
+#: portal_cms/views.py:27 portal_cms/views.py:40 portal_cms/views.py:41
+#: portal_cms/views.py:42
+msgid "Pós-graduação"
+msgstr "Post-graduation"
+
+#: portal_cms/views.py:28 portal_cms/views.py:45 portal_cms/views.py:46
+#: portal_cms/views.py:47
+msgid "Extensão"
+msgstr "Extension"
+
+#: portal_cms/views.py:36
+msgid "Descrição Graduação"
+msgstr ""
+"Here you can find anything related to Graduation. Courses, internship "
+"opportunities, etc"
+
+#: portal_cms/views.py:41
+msgid "Descrição Pós-graduação"
+msgstr ""
+"Here you can find anything related to Post-graduation. Courses, job "
+"opportunities, etc"
+
+#: portal_cms/views.py:46
+msgid "Descrição Extensão"
+msgstr ""
+"Here you can find anything related to Extension. Courses, job opportunities, "
+"etc"
+
+#: portal_cms/views.py:60
+msgid "Artigo"
+msgstr "Article"
+
+#: portal_cms/views.py:62
+msgid "Dissertação / Tese"
+msgstr "Thesis / Dissertation"

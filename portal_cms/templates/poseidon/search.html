@@ -1,0 +1,23 @@
+{% load i18n %}
+
+<aside class="widget widget_search clearfix">
+    <div class="widget-header">
+        <h3 class="widget-title">
+            {% trans 'Busca' %}
+        </h3>
+    </div>
+    <form role="search" method="get" class="search-form" action="#">
+        <label>
+            <span class="screen-reader-text">
+                {% trans 'Buscar por:' %}
+            </span>
+            <input type="search" class="search-field" placeholder="{% trans 'Digite o que deseja buscar' %}" value="" name="s"
+                title="{% trans 'Buscar por:' %}" />
+        </label>
+        <button type="submit" class="search-submit">
+            <span class="genericon-search">
+            </span>
+            <span class="screen-reader-text">{% trans 'Buscar' %}</span>
+        </button>
+    </form>
+</aside>

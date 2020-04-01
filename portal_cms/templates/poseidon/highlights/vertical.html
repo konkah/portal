@@ -1,0 +1,69 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="widget poseidon-magazine-vertical-box-widget">
+    <div class="widget-magazine-posts-vertical-box widget-magazine-posts clearfix">
+        {% include 'poseidon/pieces/header.html' with title=instance.title url=instance.url %}
+
+		{% if instance.content %}
+			<p>{{ instance.content }}</p>
+		{% endif %}
+
+        <div class="widget-magazine-posts-content magazine-vertical-box clearfix">
+            <article
+                class="large-post clearfix post type-post status-publish format-standard has-post-thumbnail hentry category-flyboarding category-slider tag-customizer tag-easy tag-settings tag-theme-options tag-user-friendly">
+                <a href="{{ instance.highlights.0.url }}" rel="bookmark">
+                    <img width="600" height="400"
+                        src="{{ instance.highlights.0.image }}"
+                        class="attachment-poseidon-thumbnail-large size-poseidon-thumbnail-large wp-post-image" alt="" />
+                </a>
+                <header class="entry-header">
+                    <h2 class="entry-title">
+                        <a href="{{ instance.highlights.0.url }}" rel="bookmark">
+                            {{ instance.highlights.0.title }}
+                        </a>
+                    </h2>
+                    <div class="entry-meta">
+                        {% include 'poseidon/pieces/date.html' with date=instance.highlights.0.date url=instance.highlights.0.url %}
+                        {% include 'poseidon/pieces/author.html' %}
+                    </div>
+                </header>
+                <div class="entry-content">
+                    <p>
+                        {% if instance.highlights.0.content %}
+                            {{ instance.highlights.0.content }}[&#8230;]
+                        {% endif %}
+                    </p>
+                    <a href="{{ instance.highlights.0.url }}" class="more-link">
+                        {% trans 'Leia mais' %}
+                    </a>
+                </div>
+            </article>
+            <div class="small-posts clearfix">
+                {% for highlight in instance.highlights|slice:"1:" %}
+                    <article
+                        class="small-post clearfix post type-post status-publish format-standard has-post-thumbnail hentry category-flyboarding category-sailing tag-magazine tag-posts tag-widgets">
+                        <a href="{{ highlight.url }}" rel="bookmark">
+                            <img width="120" height="80"
+                                src="{{ highlight.image }}"
+                                class="attachment-poseidon-thumbnail-small size-poseidon-thumbnail-small wp-post-image"
+                                alt="" />
+                        </a>
+                        <div class="post-content clearfix">
+                            <header class="entry-header">
+                                <h2 class="entry-title">
+                                    <a href="{{ highlight.url }}" rel="bookmark">
+                                        {{ highlight.title }}
+                                    </a>
+                                </h2>
+                                <div class="entry-meta">
+                                    {% include 'poseidon/pieces/date.html' with date=highlight.date url=highlight.url %}
+                                </div>
+                            </header>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

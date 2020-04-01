@@ -1,0 +1,14 @@
+{% extends "poseidon/base.html" %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans 'Escolha o modelo da Página' %}{% endblock title %}
+
+{% block content %}
+	<article class="page-body">
+		<h1>{% trans 'Escolha o modelo da Página' %}</h1>
+		<p>
+			{% trans 'InstrucoesModelo' %}
+		</p>
+	</article>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends "portal_cms/article.html" %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<span class="edit-tip">
+		{% trans 'Image de Slide' %}
+	</span>
+	{% placeholder "content" %}
+{% endblock %}

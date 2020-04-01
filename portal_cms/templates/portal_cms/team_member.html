@@ -1,0 +1,18 @@
+{% extends "portal_cms/article.html" %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<h2>
+		<span class="edit-tip">
+			{% trans 'Subtipos' %}<br />
+			{% trans 'Subtipos Time' %}
+		</span>
+		{% placeholder 'subtype' %}
+	</h2>
+
+	{% placeholder "content" %}
+
+	<h3><em>Lattes</em></h3>
+	{% placeholder "lattes" %}
+{% endblock %}

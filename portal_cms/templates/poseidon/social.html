@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<aside class="widget tzwb-social-icons clearfix">
+    {% include 'poseidon/pieces/header.html' with title=title url="" %}
+    <ul class="social-icons-menu">
+        <li>
+            <a href="https://www.facebook.com" target="_blank">
+                <span class="screen-reader-text">Facebook</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com" target="_blank">
+                <span class="screen-reader-text">Youtube</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.unicamp.br/" class="social-with-image" target="_blank">
+                <img class="negative" src="{% static 'images/logo/unicamp-negativo.png' %}" />
+                <img class="colored" src="{% static 'images/logo/unicamp-colorido.png' %}" />
+                <span class="screen-reader-text">Unicamp</span>
+            </a>
+        </li>
+    </ul>
+</aside>

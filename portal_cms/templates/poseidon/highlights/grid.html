@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<div class="widget poseidon-magazine-grid-widget">
+    <div class="widget-magazine-posts-grid widget-magazine-posts clearfix">
+        {% include 'poseidon/pieces/header.html' with title=instance.title url=instance.url %}
+
+		{% if instance.content %}
+			<p>{{ instance.content }}</p>
+		{% endif %}
+
+        <div class="widget-magazine-posts-content magazine-grid-three-columns magazine-grid">
+            {% for highlight in instance.highlights %}
+                <div class="post-column">
+                    <article
+                        class="medium-post clearfix post type-post status-publish format-standard has-post-thumbnail hentry category-diving category-surfing tag-layout tag-mobile-ready tag-responsive tag-theme tag-webdesign">
+                        <a href="{{ highlight.url }}" rel="bookmark">
+                            <img width="360" height="240" src="{{ highlight.image }}"
+                                class="attachment-poseidon-thumbnail-medium size-poseidon-thumbnail-medium wp-post-image"
+                                alt="" />
+                        </a>
+                        <header class="entry-header">
+                            <h2 class="entry-title">
+                                <a href="{{ highlight.url }}" rel="bookmark">
+                                    {{ highlight.title }}
+                                </a>
+                            </h2>
+                            <div class="entry-meta">
+                                {% include 'poseidon/pieces/date.html' with date=highlight.date url=highlight.url %}
+                            </div>
+                        </header>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+{% load cms_tags %}
+{% load i18n %}
+
+<ul class="{{mainClass}}">
+    <li class="menu-item current-menu-item">
+        <a href="{% url 'home' %}">{% trans 'Home' %}</a>
+    </li>
+
+    <li class="menu-item menu-item-has-children">
+        <a href="#">{% trans 'Institucional' %}</a>
+        <ul class="sub-menu">
+            <li class="menu-item">
+                <a href="#">{% trans 'Sobre nós' %}</a>
+            </li>
+            <li class="menu-item">
+                <a href="#">{% trans 'Equipe' %}</a>
+            </li>
+            <li class="menu-item">
+                <a href="/#laboratories">{% trans 'Laboratórios' %}</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'partner' %}">{% trans 'Parceiros' %}</a>
+            </li>
+        </ul>
+    </li>
+    <li class="menu-item">
+        <a href="#">
+            {% trans 'Pesquisa & Desenvolvimento' %}
+        </a>
+    </li>
+    <li class="menu-item">
+        <a href="#">
+            {% trans 'Ensino' %}
+        </a>
+    </li>
+    <li class="menu-item">
+        <a href="#">
+            {% trans 'Publicações' %}
+        </a>
+    </li>
+
+    <li class="menu-item">
+        <a href="{% url 'contact' %}">
+            {% trans 'Contato' %}
+        </a>
+    </li>
+
+	{% include 'poseidon/language.html' with lang="pt-br" %}
+	{% include 'poseidon/language.html' with lang="en-us" %}
+</ul>

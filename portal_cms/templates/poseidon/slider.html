@@ -1,0 +1,40 @@
+{% load staticfiles %}
+
+<div id="post-slider-container" class="post-slider-container clearfix">
+    <div id="post-slider-wrap" class="post-slider-wrap clearfix">
+        <div id="post-slider" class="post-slider zeeflexslider">
+            <ul class="zeeslides">
+                {% for slide in highlights %}
+                    <li class="clearfix">
+                        <!--<a class="slide-image-link" href="{{ slide.url }}" rel="bookmark">-->
+                            <figure class="slide-image-wrap">
+                                <img width="1920" height="480" alt=""
+                                    src="{{ slide.image }}"
+                                    class="slide-image wp-post-image" />
+                            </figure>
+                        <!--</a>-->
+                        <div class="slide-post clearfix">
+                            <div class="slide-content container clearfix">
+                                <!--<h2 class="entry-title">
+                                    <a href="{{ slide.url }}" rel="bookmark">
+                                        {{ slide.title }}
+                                    </a>
+                                </h2>-->
+                                <div class="entry-meta">
+                                    {% include 'poseidon/pieces/date.html' with date=slide.date url=slide.url %}
+                                    {% include 'poseidon/pieces/author.html' %}
+                                    <!--span class="meta-category">
+                                        <a href="#" rel="category tag">imagem</a>,
+                                        <a href="#" rel="category tag">exemplo</a>
+                                    </span-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="post-slider-controls">
+        </div>
+    </div>
+</div>

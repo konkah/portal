@@ -1,0 +1,24 @@
+.row {
+    display: flex;
+}
+
+.col {
+    flex-grow: 1;
+	flex-basis: 100%;
+    margin: 0 20px;
+}
+    .col:first-child {
+        margin-left: 0;
+    }
+    .col:last-child {
+        margin-right: 0;
+    }
+
+@media only screen and (max-width:40em) {
+	.row {
+		display: block;
+	}
+	.col {
+		margin: 0;
+	}
+}

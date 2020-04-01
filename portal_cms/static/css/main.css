@@ -1,0 +1,161 @@
+#logo img {
+    height: 58px;
+}
+
+.site-header, .header-main {
+    height: 91px;
+}
+
+.site-branding {
+    margin-bottom: 0;
+}
+
+header .sub-menu .menu-item:hover {
+    border-left: 4px solid #00ff00;
+}
+
+ul.social-icons-menu li a.social-with-image {
+    padding: 11px 12px;
+    height: 48px;
+}
+
+ul.social-icons-menu li:hover {
+    height: 48px;
+}
+
+ul.social-icons-menu li a.social-with-image img.colored {
+    display: none;
+}
+
+ul.social-icons-menu li a.social-with-image:hover img.negative {
+    display: none;
+}
+
+ul.social-icons-menu li a.social-with-image:hover img.colored {
+    display: block;
+}
+
+.tzwb-social-icons .social-icons-menu li a:hover {
+    background: transparent !important;
+}
+
+.tzwb-social-icons .social-icons-menu li a {
+    background: #FF0000 !important;
+}
+
+.social-icons-menu li a[href*="facebook.com"]:hover:before {
+    color: #4267b2;
+}
+
+.social-icons-menu li a[href*="youtube.com"]:hover:before {
+    color: #ff0000;
+}
+
+.site-description {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.footer-content {
+    color: grey !important;
+}
+
+.footer-content .footer-right,
+.footer-content .footer-right * {
+    text-align: right;
+}
+
+.footer-content .footer-right a {
+    border-radius: 30px;
+}
+
+.footer-content .widget-header {
+    display: none;
+}
+
+.footer-content .social-icons-menu {
+    margin-right: -10px;
+}
+
+#footer ul ul {
+    list-style: circle !important;
+}
+
+@media (max-width:960px) {
+    .footer-content {
+        display: block;
+    }
+
+    .footer-content .footer-right,
+    .footer-content .footer-right * {
+        text-align: left;
+    }
+}
+
+.page-body {
+    margin: 30px 100px;
+}
+
+.page-body img {
+    max-width: 600px;
+    border: 1px solid #404040;
+}
+
+.page-body .magazine-posts-column-left {
+	width: 100%;
+}
+
+.anchor {
+    position: relative;
+    top: -30px;
+}
+
+.widget-magazine-posts .magazine-horizontal-box .large-post .wp-post-image {
+    padding-right: 0;
+}
+
+.edit-tip {
+	display: none;
+}
+
+.edit-mode .edit-tip {
+	display: block;
+	color: #CCC;
+	font-size: 20px;
+	margin: 0 0 20px 0;
+	padding: 1em;
+	border: 3px #CCC dashed;
+}
+
+.contact-submit {
+	width: 100%;
+	margin: 20px 0 50px 0;
+}
+
+#footer .menu-language {
+	display: none;
+}
+
+header .menu-language a {
+	height: 24px;
+}
+
+header .menu-language a img {
+	padding: 3px 0;
+}
+
+@media only screen and (max-width:40em) {
+	.page-body {
+		margin: 30px 30px;
+	}
+}

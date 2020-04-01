@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<ul class="tzwb-comments-list">
+    {% for link in links %}
+        <li class="tzwb-has-avatar">
+            <a href="{{link.url}}">
+                <img alt=''
+                    src="{{link.image}}"
+                    class='avatar avatar-55 photo' height='55' width='55' />
+            </a>
+            <a href='{{link.url}}' rel='external nofollow ugc' class='url'>
+                {{link.title}}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

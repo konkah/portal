@@ -1,0 +1,12 @@
+<div class="widget-header">
+    <h3 class="widget-title">
+		<a name="{{title}}" id="{{title}}"></a>
+		{% if url %}
+			<a href="{{ url }}" title="{{ title }}">
+				{{ title }}
+			</a>
+		{% else %}
+            {{ title }}
+		{% endif %}
+    </h3>
+</div>

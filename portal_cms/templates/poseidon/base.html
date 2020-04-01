@@ -1,0 +1,52 @@
+{% load cms_tags menu_tags sekizai_tags %}
+
+<!DOCTYPE html>
+<!--
+    Poseidon - Magazine WordPress Theme
+    https://preview.themezee.com/poseidon/
+-->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal - {% block title %}Home{% endblock title %}</title>
+    
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/exo_2.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/open_sans.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/poseidon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap_fix.css' %}" />
+    <link rel="icon" href="{% static 'images/logo/favicon.png' %}">
+
+    {% render_block "css" %}
+
+    <!--[if lt IE 9]>
+        <script type='text/javascript' src="{% static 'js/html5shiv.min.js' %}">
+        </script>
+    <![endif]-->
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var poseidon_slider_params = { "animation": "slide", "speed": "7000" };
+        /* ]]> */
+    </script>
+
+</head>
+
+<body class="home page-template page-template-template-magazine page-template-template-magazine-php page wp-embed-responsive {% if request.toolbar.edit_mode_active %}edit-mode{% endif %}">
+    {% cms_toolbar %}
+
+    <div id="page" class="hfeed site"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+        {% include 'poseidon/header.html' %}
+        {% block content %}
+        {% endblock %}
+        {% include 'poseidon/footer.html' %}
+    </div>
+
+    <script src="{% static 'js/poseidon.js' %}" ></script>
+    {% render_block "js" %}
+</body>
+
+</html>

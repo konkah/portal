@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div id="footer" class="footer-wrap">
+    <footer class="container clearfix" role="contentinfo">
+        <div id="footer-text" class="site-info">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <h3>{% trans 'Mapa do site' %}</h3>
+                        {% include 'poseidon/navigation.html' %}
+                    </div>
+                    <div class="footer-center">
+                        <h3>{% trans 'Nossa Localização' %}</h3>
+                        Rua XXXXXX, XXX<br>
+                        XXXX XXXXXX "XXXXX" s/n<br>
+                        XXXXXX - XXXX - XXXXX<br>
+                        {% trans 'Caixa Postal' %} XXXX - {% trans 'CEP' %}: XXXX <br>
+                        {% trans 'Tel.' %}: +XX XX XXXXX-XXXX<br>
+                        {% trans 'Fax' %}: +XX XX XXXXX-XXXX<br>
+                    </div>
+                    <div class="footer-right">
+                        <h3>Links</h3>
+                        {% include 'poseidon/social.html' %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </footer>
+</div>

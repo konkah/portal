@@ -1,0 +1,19 @@
+{% extends "portal_cms/article.html" %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<h2>
+		<span class="edit-tip">
+			{% trans 'Subtipos' %}<br />
+			{% trans 'Subtipos Ensino' %}
+		</span>
+		{% placeholder 'subtype' %}
+	</h2>
+
+	{% placeholder "content" %}
+
+	<h3>{% trans 'Professor' %}</h3>
+
+	{% placeholder "teacher" %}
+{% endblock %}

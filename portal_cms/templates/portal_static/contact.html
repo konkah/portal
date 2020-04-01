@@ -1,0 +1,50 @@
+{% extends "portal_cms/article.html" %}
+{% load staticfiles %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<div class="row">
+		<div class="col">
+			<h2>{% trans 'Contato' %}</h2>
+
+			<form role="search" method="post" class="search-form">
+				<h4>{% trans 'Dados' %}</h4>
+				{% csrf_token %}
+
+				<input type="text" class="search-field"
+					name="name"
+					placeholder="{% trans 'Name' %}"
+					value="{{ form.name.value|default_if_none:'' }}"
+					title="{% trans 'Name' %}" />
+				<span class="error">{{ form.name.error }}</span>
+
+				<input type="text" class="search-field"
+					name="email"
+					placeholder="{% trans 'Email' %}"
+					value="{{ form.email.value|default_if_none:'' }}"
+					title="{% trans 'Email' %}" />
+				<span class="error">{{ form.email.error }}</span>
+
+				<input type="text" class="search-field"
+					name="phone"
+					placeholder="{% trans 'Phone' %}"
+					value="{{ form.phone.value|default_if_none:'' }}"
+					title="{% trans 'Phone' %}" />
+				<span class="error">{{ form.phone.error }}</span>
+
+				<h4>{% trans 'Message' %}</h4>
+
+				<textarea name="message">{{ form.message.value|default_if_none:'' }}</textarea>
+				<span class="error">{{ form.message.error }}</span>
+
+				<button type="submit" class="contact-submit">
+					{% trans 'Enviar' %}
+				</button>
+			</form>
+		</div>
+		<div class="col">
+			<iframe src="https://www.google.com/maps/embed" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</div>
+{% endblock %}

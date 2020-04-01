@@ -1,0 +1,85 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<div class="">
+    <div class="widget-magazine-posts-columns widget-magazine-posts">
+        <div class="widget-magazine-posts-content cdclearfix">
+            {% include 'poseidon/pieces/header.html' with title=instance.title url=instance.url %}
+			{% if instance.content %}
+				<p>{{ instance.content }}</p>
+			{% endif %}
+            {% for column in instance.columns %}
+                <div class="magazine-posts-column-left magazine-posts-columns clearfix">
+					{% if column.image or column.title or column.description or column.url %}
+						<div class="magazine-posts-columns-content clearfix">
+							<div class="magazine-posts-columns-post-list clearfix">
+								<article
+									class="large-post clearfix post-1999 post type-post status-publish format-standard has-post-thumbnail hentry category-sailing category-slider tag-featured tag-posts tag-slider tag-slideshow">
+									{% if column.image %}
+										<a href="{{ column.url }}" rel="bookmark">
+											<img width="600" height="400" src="{{ column.image }}"
+												class="attachment-poseidon-thumbnail-large size-poseidon-thumbnail-large wp-post-image"
+												alt="" />
+										</a>
+									{% endif %}
+									{% if column.title %}
+										<header class="entry-header">
+											<h2 class="entry-title">
+												{% if column.url %}
+													<a href="{{ column.url }}" rel="bookmark">
+														{{ column.title }}
+													</a>
+												{% else %}
+													{{ column.title }}
+												{% endif %}
+											</h2>
+										</header>
+									{% endif %}
+									{% if column.description or column.url %}
+										<div class="entry-content">
+											{% if column.description %}
+												<p>{{ column.description }}</p>
+											{% endif %}
+											{% if column.url %}
+												<a href="{{ column.url }}" class="more-link">
+													{% trans 'Leia mais' %}
+												</a>
+											{% endif %}
+										</div>
+									{% endif %}
+								</article>
+							</div>
+						</div>
+					{% endif %}
+                    {% for highlight in column.highlights %}
+                        <div class="magazine-posts-columns-content clearfix">
+                            <div class="magazine-posts-columns-post-list clearfix">
+                                <article
+                                    class="small-post clearfix post-2603 post type-post status-publish format-standard has-post-thumbnail hentry category-flyboarding category-sailing tag-magazine tag-posts tag-widgets">
+                                    <a href="{{ highlight.url }}" rel="bookmark">
+                                        <img width="120" height="80" src="{{ highlight.image }}"
+                                            class="attachment-poseidon-thumbnail-small size-poseidon-thumbnail-small wp-post-image"
+                                            alt="" />
+                                    </a>
+                                    <div class="post-content clearfix">
+                                        <header class="entry-header">
+                                            <h2 class="entry-title">
+                                                <a href="{{ highlight.url }}" rel="bookmark">
+                                                    {{ highlight.title }}
+                                                </a>
+                                            </h2>
+                                            <div class="entry-meta">
+                                                {% include 'poseidon/pieces/date.html' with date=highlight.date url=highlight.url %}
+                                            </div>
+                                        </header>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>

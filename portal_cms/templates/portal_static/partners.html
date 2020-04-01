@@ -1,0 +1,27 @@
+{% extends "portal_cms/article.html" %}
+{% load staticfiles %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<h2>{% trans 'Parceiros' %}</h2>
+
+	<div class="widget poseidon-magazine-grid-widget">
+		<div class="widget-magazine-posts-grid widget-magazine-posts clearfix">
+			<div class="widget-magazine-posts-content magazine-grid-three-columns magazine-grid">
+				{% for partner in partners %}
+					<div class="post-column">
+						<article
+							class="medium-post clearfix post type-post status-publish format-standard has-post-thumbnail hentry category-diving category-surfing tag-layout tag-mobile-ready tag-responsive tag-theme tag-webdesign">
+							<a href="{{ partner.url }}" title="{{ partner.name }}" rel="bookmark" target="_blank">
+								<img width="360" height="240" src="/media/{{ partner.image }}"
+									class="attachment-poseidon-thumbnail-medium size-poseidon-thumbnail-medium wp-post-image"
+									alt="{{ partner.name }}" title="{{ partner.name }}" />
+							</a>
+						</article>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

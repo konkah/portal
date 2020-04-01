@@ -1,0 +1,20 @@
+{% extends "portal_cms/article.html" %}
+{% load cms_tags %}
+{% load i18n %}
+
+{% block article %}
+	<h2>{% trans 'Objetivo' %}</h2>
+	{% placeholder "content" %}
+
+	<h2>{% trans 'Coordenador' %}</h2>
+	{% placeholder "coordinator" %}
+
+	<h2>{% trans 'Responsável Técnico' %}</h2>
+	{% placeholder "technical_responsible" %}
+
+	<h2>{% trans 'Financiadora' %}</h2>
+	{% placeholder "financier" %}
+
+	<h2>{% trans 'Vigência' %}</h2>
+	{% placeholder "validity" %}
+{% endblock %}

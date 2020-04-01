@@ -1,0 +1,11 @@
+{% extends "portal_cms/article.html" %}
+{% load cms_tags %}
+
+{% block article %}
+    <div class="sidebar">
+        {% placeholder "sidebar" %}
+    </div>
+    <div class="content">
+        {% placeholder "content" %}
+    </div>
+{% endblock %}

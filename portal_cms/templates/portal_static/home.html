@@ -1,0 +1,11 @@
+{% extends 'poseidon/base_sidebar.html' %}
+
+{% block top %}
+    {% include 'poseidon/slider.html' with highlights=slides %}
+{% endblock %}
+{% block main %}
+    {% include 'poseidon/highlights/grid.html' with instance=researchGrid %}
+    {% include 'poseidon/highlights/columns.html' with instance=teachingColumns %}
+    <a name="laboratories" id="laboratories" class="anchor"></a>
+    {% include 'poseidon/highlights/grid.html' with instance=labsGrid %}
+{% endblock %}
